@@ -1,477 +1,633 @@
-<!DOCTYPE HTML>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Sourabh Ninawe</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sourabh Ninawe | Portfolio</title>
+  <meta name="description" content="Portfolio of Sourabh Ninawe - engineering leader building reliable products, modern platforms, and high-impact teams." />
+  <link rel="stylesheet" href="assets/css/fontawesome-all.min.css" />
+  <style>
+    :root {
+      --bg: #0f172a;
+      --bg-soft: #111d3a;
+      --card: #ffffff;
+      --text: #0f172a;
+      --muted: #4b5563;
+      --line: #dbe4f0;
+      --accent: #1d4ed8;
+      --accent-2: #0ea5a4;
+      --surface: #f8fbff;
+      --shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+    }
 
-		<!-- Header -->
-			<section id="header">
-				<header>
-					<span class="image avatar"><img src="images/avatar.jpg" alt="" /></span>
-					<h1 id="logo"><a href="#">Sourabh Ninawe</a></h1>
-					<b><p>Senior Software Developer @ Oracle</p></b>
-				</header>
-				<nav id="nav">
-					<ul>
-						<li><a href="#one" class="active">About Me</a></li>
-						<li><a href="#two">Work Experience</a></li>
-						<li><a href="#three">Projects</a></li>
-						<li><a href="#four">Education</a></li>
-						<li><a href="#five">Contact Me</a></li>
-					</ul>
-				</nav>
-				<footer>
-					<ul class="icons">
-						<li><a href="#" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-						<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-					</ul>
-				</footer>
-			</section>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+    html {
+      scroll-behavior: smooth;
+    }
 
-				<!-- Main -->
-					<div id="main">
+    body {
+      font-family: "Avenir Next", "Segoe UI", "Trebuchet MS", sans-serif;
+      color: var(--text);
+      background: var(--surface);
+      line-height: 1.6;
+    }
 
-						<!-- One -->
-							<section id="one">
-								<div class="image main" data-position="center">
-									<img src="images/banner.jpg" alt="" />
-								</div>
-								<div class="container">
-									<header class="major">
-										<h3>About Me</h3>
-										<p>Currently working as a Senior Software Developer at Oracle</p>
-									</header>
-									<p>System Design Enthusiast skilled in Java, Jakarta EE, Oracle Database, Docker, Kubernetes, Jenkins, Shell Script and Linux, Oracle Jet, Full-Stack Development and Oracle Cloud Infrastructure. </p>
-									<p>Strong engineering professional with a Bachelor’s Degree focused in Computer Science from Indian Institute of Information Technology, Design and Manufacturing, Jabalpur. </p>
-								</div>
-							</section>
+    .bg-art {
+      position: fixed;
+      inset: 0;
+      z-index: -1;
+      background:
+        radial-gradient(circle at 15% 10%, rgba(14, 165, 164, 0.18), transparent 30%),
+        radial-gradient(circle at 90% 20%, rgba(29, 78, 216, 0.18), transparent 32%),
+        linear-gradient(180deg, #f4f8ff 0%, #f7fbff 45%, #f5faf9 100%);
+    }
 
-						<!-- Two -->
-							<section id="two">
-								<div class="container">
-									<h3>Work Experience</h3>
-									<p><b>Current: Senior Software Developer</b></p>
-									<ul class="feature-icons">
-										<li class="icon solid fa-code">Write all the code</li>
-										<li class="icon solid fa-cubes">Stack small boxes</li>
-										<li class="icon solid fa-book">Read books and stuff</li>
-										<li class="icon solid fa-coffee">Drink much coffee</li>
-										<li class="icon solid fa-bolt">Lightning bolt</li>
-										<li class="icon solid fa-users">Shadow clone technique</li>
-									</ul>
-									<p>Software Developer 2</p>
-									<p>Software Developer 1</p>
-								</div>
-							</section>
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
 
-						<!-- Three -->
-							<section id="three">
-								<div class="container">
-									<h3>Projects</h3>
-									<p>Oracle Retail Merchandising System ( Oracle RMS ) </p>
-					
-								</div>
-							</section>
-							<section id="four">
-								<div class="container">
-									<h3>Education</h3>
-									<h4>B.Tech - Computer Science and Engineering</h4>
-									<h5>Indian Institute of Information Technology Design and Manufacturing ( IIIT Jabalpur , Madhya Pradesh )</h5><br/>
-									
-									<h4>Everonn Toppers Junior College</h4>
-									<br>
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(248, 251, 255, 0.85);
+      border-bottom: 1px solid rgba(15, 23, 42, 0.08);
+    }
 
-									<h4>D.A.V Public School, Safilguda, Hyderabad</h4>
-								</div>
-							</section>
-						<!-- Four -->
-							<section id="five">
-								<div class="container">
-									<h3>Contact Me</h3>
-									<p>Feel free to post any queries.</p>
-									<form method="post" action="#">
-										<div class="row gtr-uniform">
-											<div class="col-6 col-12-xsmall"><input type="text" name="name" id="name" placeholder="Name" /></div>
-											<div class="col-6 col-12-xsmall"><input type="email" name="email" id="email" placeholder="Email" /></div>
-											<div class="col-12"><input type="text" name="subject" id="subject" placeholder="Subject" /></div>
-											<div class="col-12"><textarea name="message" id="message" placeholder="Message" rows="6"></textarea></div>
-											<div class="col-12">
-												<ul class="actions">
-													<li><input type="submit" class="primary" value="Send Message" /></li>
-													<li><input type="reset" value="Reset Form" /></li>
-												</ul>
-											</div>
-										</div>
-									</form>
-								</div>
-							</section>
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem 0;
+      gap: 1rem;
+    }
 
-						<!-- Five -->
-						<!--
-							<section id="five">
-								<div class="container">
-									<h3>Elements</h3>
+    .brand {
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      color: var(--bg);
+      text-decoration: none;
+    }
 
-									<section>
-										<h4>Text</h4>
-										<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-										This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-										This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-										<hr />
-										<header>
-											<h4>Heading with a Subtitle</h4>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<header>
-											<h5>Heading with a Subtitle</h5>
-											<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
-										</header>
-										<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
-										<hr />
-										<h2>Heading Level 2</h2>
-										<h3>Heading Level 3</h3>
-										<h4>Heading Level 4</h4>
-										<h5>Heading Level 5</h5>
-										<h6>Heading Level 6</h6>
-										<hr />
-										<h5>Blockquote</h5>
-										<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-										<h5>Preformatted</h5>
-										<pre><code>i = 0;
+    .nav {
+      display: flex;
+      gap: 1rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
 
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
-}
+    .nav a {
+      text-decoration: none;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.95rem;
+      transition: color 0.2s ease;
+    }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-									</section>
+    .nav a:hover {
+      color: var(--accent);
+    }
 
-									<section>
-										<h4>Lists</h4>
-										<div class="row">
-											<div class="col-6 col-12-xsmall">
-												<h5>Unordered</h5>
-												<ul>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-												<h5>Alternate</h5>
-												<ul class="alt">
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Sagittis adipiscing lorem eleifend.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ul>
-											</div>
-											<div class="col-6 col-12-xsmall">
-												<h5>Ordered</h5>
-												<ol>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-													<li>Dolor pulvinar etiam magna etiam.</li>
-													<li>Etiam vel felis at lorem sed viverra.</li>
-													<li>Felis enim feugiat dolore viverra.</li>
-												</ol>
-												<h5>Icons</h5>
-												<ul class="icons">
-													<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-													<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-													<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-													<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-													<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-													<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
-												</ul>
-											</div>
-										</div>
-										<h5>Actions</h5>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Default</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Default</a></li>
-										</ul>
-										<ul class="actions small">
-											<li><a href="#" class="button primary small">Small</a></li>
-											<li><a href="#" class="button small">Small</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<div class="row">
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary">Default</a></li>
-													<li><a href="#" class="button">Default</a></li>
-													<li><a href="#" class="button alt">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6 col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small">Small</a></li>
-													<li><a href="#" class="button small">Small</a></li>
-													<li><a href="#" class="button alt small">Small</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary fit">Default</a></li>
-													<li><a href="#" class="button fit">Default</a></li>
-													<li><a href="#" class="button alt fit">Default</a></li>
-												</ul>
-											</div>
-											<div class="col-3 col-6-medium col-12-xsmall">
-												<ul class="actions stacked">
-													<li><a href="#" class="button primary small fit">Small</a></li>
-													<li><a href="#" class="button small fit">Small</a></li>
-													<li><a href="#" class="button alt small fit">Small</a></li>
-												</ul>
-											</div>
-										</div>
-									</section>
+    .hero {
+      padding: 5.5rem 0 3.5rem;
+    }
 
-									<section>
-										<h4>Table</h4>
-										<h5>Default</h5>
-										<div class="table-wrapper">
-											<table>
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
+    .hero-card {
+      background: linear-gradient(135deg, var(--bg) 0%, #1b2f67 50%, #17346d 100%);
+      border-radius: 28px;
+      padding: clamp(1.6rem, 3vw, 3rem);
+      color: #e5f0ff;
+      box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 2rem;
+      align-items: center;
+    }
 
-										<h5>Alternate</h5>
-										<div class="table-wrapper">
-											<table class="alt">
-												<thead>
-													<tr>
-														<th>Name</th>
-														<th>Description</th>
-														<th>Price</th>
-													</tr>
-												</thead>
-												<tbody>
-													<tr>
-														<td>Item One</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Two</td>
-														<td>Vis ac commodo adipiscing arcu aliquet.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Three</td>
-														<td> Morbi faucibus arcu accumsan lorem.</td>
-														<td>29.99</td>
-													</tr>
-													<tr>
-														<td>Item Four</td>
-														<td>Vitae integer tempus condimentum.</td>
-														<td>19.99</td>
-													</tr>
-													<tr>
-														<td>Item Five</td>
-														<td>Ante turpis integer aliquet porttitor.</td>
-														<td>29.99</td>
-													</tr>
-												</tbody>
-												<tfoot>
-													<tr>
-														<td colspan="2"></td>
-														<td>100.00</td>
-													</tr>
-												</tfoot>
-											</table>
-										</div>
-									</section>
+    .hero-card::after {
+      content: "";
+      position: absolute;
+      width: 320px;
+      height: 320px;
+      right: -90px;
+      top: -120px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(14, 165, 164, 0.38), transparent 68%);
+      pointer-events: none;
+    }
 
-									<section>
-										<h4>Buttons</h4>
-										<ul class="actions">
-											<li><a href="#" class="button primary">Primary</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt">Alternate</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary large">Large</a></li>
-											<li><a href="#" class="button">Default</a></li>
-											<li><a href="#" class="button alt small">Small</a></li>
-										</ul>
-										<ul class="actions fit">
-											<li><a href="#" class="button primary fit">Fit</a></li>
-											<li><a href="#" class="button fit">Fit</a></li>
-											<li><a href="#" class="button alt fit">Fit</a></li>
-										</ul>
-										<ul class="actions fit small">
-											<li><a href="#" class="button primary fit small">Fit + Small</a></li>
-											<li><a href="#" class="button fit small">Fit + Small</a></li>
-											<li><a href="#" class="button alt fit small">Fit + Small</a></li>
-										</ul>
-										<ul class="actions">
-											<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-											<li><a href="#" class="button alt icon solid fa-check">Icon</a></li>
-										</ul>
-										<ul class="actions">
-											<li><span class="button primary disabled">Primary</span></li>
-											<li><span class="button disabled">Default</span></li>
-											<li><span class="button alt disabled">Alternate</span></li>
-										</ul>
-									</section>
+    .tag {
+      display: inline-block;
+      background: rgba(229, 240, 255, 0.16);
+      border: 1px solid rgba(229, 240, 255, 0.26);
+      color: #d2ecff;
+      border-radius: 999px;
+      padding: 0.35rem 0.85rem;
+      font-size: 0.82rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
 
-									<section>
-										<h4>Form</h4>
-										<form method="post" action="#">
-											<div class="row gtr-uniform">
-												<div class="col-6 col-12-xsmall">
-													<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
-												</div>
-												<div class="col-6 col-12-xsmall">
-													<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
-												</div>
-												<div class="col-12">
-													<select name="demo-category" id="demo-category">
-														<option value="">- Category -</option>
-														<option value="1">Manufacturing</option>
-														<option value="1">Shipping</option>
-														<option value="1">Administration</option>
-														<option value="1">Human Resources</option>
-													</select>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-													<label for="demo-priority-low">Low Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-normal" name="demo-priority">
-													<label for="demo-priority-normal">Normal Priority</label>
-												</div>
-												<div class="col-4 col-12-medium">
-													<input type="radio" id="demo-priority-high" name="demo-priority">
-													<label for="demo-priority-high">High Priority</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-copy" name="demo-copy">
-													<label for="demo-copy">Email me a copy of this message</label>
-												</div>
-												<div class="col-6 col-12-medium">
-													<input type="checkbox" id="demo-human" name="demo-human" checked>
-													<label for="demo-human">I am a human and not a robot</label>
-												</div>
-												<div class="col-12">
-													<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-												</div>
-												<div class="col-12">
-													<ul class="actions">
-														<li><input type="submit" value="Send Message" /></li>
-														<li><input type="reset" value="Reset" class="alt" /></li>
-													</ul>
-												</div>
-											</div>
-										</form>
-									</section>
+    h1 {
+      font-size: clamp(1.9rem, 5vw, 3.25rem);
+      line-height: 1.1;
+      margin-bottom: 0.7rem;
+    }
 
-									<section>
-										<h4>Image</h4>
-										<h5>Fit</h5>
-										<span class="image fit"><img src="images/banner.jpg" alt="" /></span>
-										<div class="box alt">
-											<div class="row gtr-50 gtr-uniform">
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic03.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic01.jpg" alt="" /></span></div>
-												<div class="col-4"><span class="image fit"><img src="images/pic02.jpg" alt="" /></span></div>
-											</div>
-										</div>
-										<h5>Left &amp; Right</h5>
-										<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-										<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
-									</section>
+    .hero p {
+      color: #d9e8ff;
+      max-width: 56ch;
+      margin-bottom: 1.4rem;
+      font-size: 1.03rem;
+    }
 
-								</div>
-							</section>
-						-->
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
 
-					</div>
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      border-radius: 999px;
+      padding: 0.75rem 1.2rem;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 0.95rem;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
 
-				<!-- Footer -->
-				<!--
-					<section id="footer">
-						<div class="container">
-							<ul class="copyright">
-								<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-							</ul>
-						</div>
-					</section>
-				-->
-			</div>
+    .btn:hover {
+      transform: translateY(-1px);
+      box-shadow: 0 10px 18px rgba(0, 0, 0, 0.2);
+    }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+    .btn.primary {
+      background: #fff;
+      color: #11225c;
+    }
 
-	</body>
+    .btn.ghost {
+      border: 1px solid rgba(229, 240, 255, 0.5);
+      color: #e7f0ff;
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .hero-photo {
+      justify-self: center;
+      width: min(270px, 70vw);
+      aspect-ratio: 1 / 1;
+      border-radius: 24px;
+      overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.35);
+      box-shadow: 0 18px 35px rgba(5, 12, 33, 0.45);
+    }
+
+    .hero-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    section {
+      padding: 2rem 0;
+    }
+
+    .section-title {
+      font-size: clamp(1.5rem, 3.6vw, 2.2rem);
+      margin-bottom: 0.55rem;
+      color: #0b1a46;
+    }
+
+    .section-subtitle {
+      color: var(--muted);
+      margin-bottom: 1.2rem;
+      max-width: 66ch;
+    }
+
+    .stats {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 10px 20px rgba(16, 24, 40, 0.05);
+    }
+
+    .stat h3 {
+      font-size: 1.55rem;
+      line-height: 1.1;
+      color: #122e73;
+      margin-bottom: 0.25rem;
+    }
+
+    .stat p {
+      color: var(--muted);
+      font-size: 0.93rem;
+    }
+
+    .timeline {
+      display: grid;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .timeline-item {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-left: 6px solid #1d4ed8;
+      border-radius: 14px;
+      padding: 1rem 1rem 1rem 1.1rem;
+    }
+
+    .timeline-item h3 {
+      font-size: 1.05rem;
+      margin-bottom: 0.2rem;
+      color: #0d215a;
+    }
+
+    .timeline-item .meta {
+      color: #36548f;
+      font-weight: 700;
+      font-size: 0.9rem;
+      margin-bottom: 0.45rem;
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1rem;
+      box-shadow: 0 10px 20px rgba(16, 24, 40, 0.05);
+    }
+
+    .card h3 {
+      color: #0e2768;
+      margin-bottom: 0.45rem;
+      font-size: 1.02rem;
+    }
+
+    .badge-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 0.8rem;
+    }
+
+    .badge {
+      border-radius: 999px;
+      border: 1px solid #c9dcff;
+      background: #eef5ff;
+      color: #163979;
+      padding: 0.32rem 0.72rem;
+      font-size: 0.86rem;
+      font-weight: 700;
+    }
+
+    .cta {
+      margin: 1.5rem 0 3.2rem;
+      background: linear-gradient(130deg, #0d1e51, #14418a 60%, #0f8d9a);
+      border-radius: 24px;
+      color: #edf5ff;
+      padding: clamp(1.3rem, 3vw, 2rem);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      box-shadow: var(--shadow);
+    }
+
+    .cta h2 {
+      font-size: clamp(1.3rem, 3.2vw, 2rem);
+      margin-bottom: 0.35rem;
+    }
+
+    .cta p {
+      color: #d9e9ff;
+      max-width: 56ch;
+    }
+
+    .footer {
+      padding-bottom: 2.5rem;
+      color: #4d5f87;
+      text-align: center;
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 980px) {
+      .hero-card {
+        grid-template-columns: 1fr;
+      }
+
+      .hero-photo {
+        order: -1;
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .cards {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 620px) {
+      .topbar-inner {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .nav {
+        gap: 0.8rem;
+      }
+
+      .hero {
+        padding-top: 4.2rem;
+      }
+
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="bg-art" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <a href="#home" class="brand">Sourabh Ninawe</a>
+      <nav class="nav" aria-label="Primary">
+        <a href="#about">About</a>
+        <a href="#journey">Journey</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home" class="container">
+    <section class="hero" id="about">
+      <article class="hero-card">
+        <div>
+          <span class="tag">Portfolio</span>
+          <h1>Senior Software Engineer with strong product, platform, and leadership skills.</h1>
+          <p>
+            I am Sourabh Ninawe, with nearly 8 years of experience at Oracle working on full-stack Java applications, AI-enabled solutions, and database-focused systems. I enjoy building clean, reliable software, collaborating with teams, and translating complex requirements into practical outcomes.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+              <i class="fab fa-linkedin"></i> Connect on LinkedIn
+            </a>
+            <a class="btn ghost" href="#journey">Explore My Work</a>
+          </div>
+        </div>
+        <figure class="hero-photo">
+          <img src="images/avatar.jpg" alt="Portrait of Sourabh Ninawe" />
+        </figure>
+      </article>
+    </section>
+
+    <section aria-labelledby="impact-title">
+      <h2 id="impact-title" class="section-title">Senior Engineer Snapshot</h2>
+      <p class="section-subtitle">A profile centered on technical depth, ownership, and consistent delivery.</p>
+      <div class="stats">
+        <article class="stat">
+          <h3>7y 11m</h3>
+          <p>Professional experience at Oracle</p>
+        </article>
+        <article class="stat">
+          <h3>2022</h3>
+          <p>Oracle Employee of the Year</p>
+        </article>
+        <article class="stat">
+          <h3>3 Roles</h3>
+          <p>Progressed from Developer 1 to Developer 3</p>
+        </article>
+        <article class="stat">
+          <h3>End-to-End</h3>
+          <p>Delivery across design, development, security, and production support</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="journey" aria-labelledby="journey-title">
+      <h2 id="journey-title" class="section-title">Engineering Journey</h2>
+      <p class="section-subtitle">A path shaped by ownership, technical leadership, and product-focused problem solving.</p>
+      <div class="timeline">
+        <article class="timeline-item">
+          <h3>Oracle India Private Limited, Bengaluru</h3>
+          <p class="meta">2018 - Present | Software Developer 1 to Software Developer 3</p>
+          <p>Led end-to-end application development initiatives, designed and implemented full-stack features, and collaborated with global teams to deliver reliable enterprise software.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>Oracle India Private Limited, Bengaluru (Internship)</h3>
+          <p class="meta">2017</p>
+          <p>Improved installer performance, supported product enhancements, and strengthened end-to-end development experience through real business use cases.</p>
+        </article>
+        <article class="timeline-item">
+          <h3>Bharat Electronics Limited, Hyderabad (Internship)</h3>
+          <p class="meta">2016 | Internship</p>
+          <p>Built a desktop control application and delivered reliable functionality with a strong focus on usability and system responsiveness.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="highlights" aria-labelledby="highlights-title">
+      <h2 id="highlights-title" class="section-title">Senior Engineering Highlights</h2>
+      <p class="section-subtitle">Work that reflects full-stack execution across services, UI, and database, along with leadership and engineering ownership.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Full-Stack Java Delivery</h3>
+          <p>Built full-stack Java applications end-to-end, covering REST services, business logic, user interfaces, and database integration.</p>
+        </article>
+        <article class="card">
+          <h3>REST Services & API Design</h3>
+          <p>Designed and implemented reliable REST APIs with clear contracts, strong validation, and production-ready behavior.</p>
+        </article>
+        <article class="card">
+          <h3>UI Engineering</h3>
+          <p>Developed responsive and user-friendly interfaces using Oracle ADF and Oracle JET to deliver smooth, practical product experiences.</p>
+        </article>
+        <article class="card">
+          <h3>Database Engineering</h3>
+          <p>Worked deeply with Oracle Database and PL/SQL for schema design, performance tuning, data conversion, and stable data workflows.</p>
+        </article>
+        <article class="card">
+          <h3>AI Engineering</h3>
+          <p>Built practical AI solutions with LLM integration, RAG, Vector Search, prompt design, and guardrails to support real business use cases securely.</p>
+        </article>
+        <article class="card">
+          <h3>Leadership & Mentorship</h3>
+          <p>Led teams through architecture and delivery decisions while mentoring engineers and driving a high-quality engineering culture.</p>
+        </article>
+        <article class="card">
+          <h3>Security & Reliability Ownership</h3>
+          <p>Served as a key security owner for multiple products, ensuring dependable systems, stronger practices, and operational excellence.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="section-title">Project Portfolio</h2>
+      <p class="section-subtitle">Selected work across enterprise platforms, AI initiatives, and data-driven solutions.</p>
+      <div class="cards">
+        <article class="card">
+          <h3>Java Projects</h3>
+          <p>Developed and enhanced enterprise applications including Oracle RMS, ReSA, and Data Conversion platforms. Built full-stack Java solutions from REST services to UI and database workflows using Java, Spring Boot, Jakarta EE, Oracle ADF, Oracle JET, and Oracle Database. Also created platform components like data migration frameworks and production-grade service modules.</p>
+        </article>
+        <article class="card">
+          <h3>AI-Related Projects</h3>
+          <p>Designed and delivered an enterprise AI platform for secure business automation and conversational workflows. Built AI-driven experiences using LLM integration, prompt engineering, MCP, RAG, AI guardrails, Select AI, vector search, and NLP-to-SQL capabilities to enable smarter user interactions with enterprise data.</p>
+        </article>
+        <article class="card">
+          <h3>Database Projects</h3>
+          <p>Built and optimized database-centric solutions for data migration, data conversion, and analytics. Designed robust schema and query workflows using Oracle Database, PL/SQL, and Oracle RPD modeling, with focus on performance tuning, reliability, and high-quality enterprise data operations.</p>
+        </article>
+        <article class="card">
+          <h3>Other Notable Projects</h3>
+          <p>Developed multiple hands-on projects across domains: Smart Helmet (IoT safety system with Arduino, sensors, GPS, and GSM), IPL Auction Management System (Laravel + MySQL full-stack application), Spam SMS Detection (Naive Bayes ML model), Brick Breaker (Java desktop game), and RX Control Application at BEL (Java Swing-based monitoring and control tool).</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="section-title">Skills</h2>
+      <p class="section-subtitle">Core capabilities across technology, AI, leadership, and collaboration.</p>
+
+      <div class="cards">
+        <article class="card">
+          <h3>Technical Skills</h3>
+          <div class="badge-wrap">
+            <span class="badge">Java</span>
+            <span class="badge">Python</span>
+            <span class="badge">Spring Boot</span>
+            <span class="badge">Oracle Database</span>
+            <span class="badge">PL/SQL</span>
+            <span class="badge">Oracle ADF</span>
+            <span class="badge">Oracle JET</span>
+            <span class="badge">REST APIs</span>
+            <span class="badge">Docker</span>
+            <span class="badge">Kubernetes</span>
+            <span class="badge">OCI</span>
+            <span class="badge">Jenkins</span>
+            <span class="badge">GitLab</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>AI Skills</h3>
+          <div class="badge-wrap">
+            <span class="badge">LLM Integration</span>
+            <span class="badge">RAG</span>
+            <span class="badge">Prompt Engineering</span>
+            <span class="badge">MCP</span>
+            <span class="badge">Vector Search</span>
+            <span class="badge">NLP-to-SQL</span>
+            <span class="badge">AI Guardrails</span>
+            <span class="badge">Enterprise Chatbots</span>
+          </div>
+        </article>
+
+        <article class="card">
+          <h3>Other Skills</h3>
+          <div class="badge-wrap">
+            <span class="badge">System Design</span>
+            <span class="badge">Technical Architecture</span>
+            <span class="badge">Team Leadership</span>
+            <span class="badge">Mentoring</span>
+            <span class="badge">Stakeholder Management</span>
+            <span class="badge">Security Ownership</span>
+            <span class="badge">Production Support</span>
+            <span class="badge">Problem Solving</span>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" aria-labelledby="education-title">
+      <h2 id="education-title" class="section-title">Education</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>B.Tech in Computer Science & Engineering</h3>
+          <p>PDPM Indian Institute of Information Technology, Design and Manufacturing, Jabalpur</p>
+        </article>
+        <article class="card">
+          <h3>Class XII</h3>
+          <p>Everonn Toppers Junior College, Hyderabad</p>
+        </article>
+        <article class="card">
+          <h3>Class X</h3>
+          <p>D.A.V. Public School, Hyderabad</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="certifications" aria-labelledby="certs-title">
+      <h2 id="certs-title" class="section-title">Certifications & Recognition</h2>
+      <p class="section-subtitle">Continuous learning and consistent performance recognition.</p>
+      <div class="badge-wrap">
+        <span class="badge">OCI Gen AI Professional</span>
+        <span class="badge">OCI Vector Search Professional</span>
+        <span class="badge">OCI Associate</span>
+        <span class="badge">Oracle ADF</span>
+        <span class="badge">Oracle Database</span>
+        <span class="badge">Java SE 8</span>
+        <span class="badge">Oracle Employee of the Year 2022</span>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="connect-title">
+      <div>
+        <h2 id="connect-title">Let’s connect on LinkedIn</h2>
+        <p>
+          For collaborations, opportunities, or a detailed discussion, please DM me on LinkedIn for contact details.
+        </p>
+      </div>
+      <a class="btn primary" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+        <i class="fab fa-linkedin"></i> Open LinkedIn
+      </a>
+    </section>
+
+    <footer class="footer">
+      <p>&copy; 2026 Sourabh Ninawe. Built with focus on clarity, impact, and simplicity.</p>
+    </footer>
+  </main>
+</body>
 </html>
